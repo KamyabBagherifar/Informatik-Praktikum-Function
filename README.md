@@ -1,4 +1,4 @@
-### Template-Repository für folgende Aufgaben (siehe Moodle)
+### Template-Repository für folgende Aufgaben
 - Jqwik
 - Funktionen in Java
 - Curryfizierung in Haskell und Java
