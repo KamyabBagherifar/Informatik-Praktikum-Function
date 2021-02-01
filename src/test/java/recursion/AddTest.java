@@ -1,17 +1,13 @@
 package recursion;
 
-import org.junit.jupiter.api.*;
+import net.jqwik.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static recursion.Methods.add;
 
 class AddTest {
 
-  @DisplayName("2 plus 3")
-  @Test
-  void simpleAdd() {
-    int expects = 5;
-    int received = add(2, 3);
-    assertEquals(expects, received);
+  @Property
+  boolean testAdd(@ForAll int a, @ForAll int b) {
+    return add(a, b) == a +b;
   }
 }
