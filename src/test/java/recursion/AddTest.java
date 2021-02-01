@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static recursion.Methods.add;
 
 class AddTest {
 
