@@ -1,6 +1,7 @@
 package recursion;
 
 import net.jqwik.api.*;
+import net.jqwik.api.constraints.IntRange;
 
 import static recursion.Methods.add;
 
