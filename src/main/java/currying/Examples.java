@@ -2,7 +2,7 @@ package currying;
 
 public class Examples {
 // Examples from FPJ-Buch
-  public static final Function<Integer, Integer> fact0 = n -> n <= 1 ? n : n * Examples.fact0.apply(n - 1);
+  public static final Function<Integer, Integer> fact0 = n -> n == 0 ? 1 : n * Examples.fact0.apply(n - 1);
 
   public static Function<Integer, Integer> fact1;
   static {
