@@ -5,7 +5,7 @@ import net.jqwik.api.constraints.IntRange;
 
 import static currying.Examples.fact0;
 
-class ExampleTest {
+class ExamplesTest {
 
   @Data
   Iterable<Tuple.Tuple2<Integer,Integer>> facts(){
