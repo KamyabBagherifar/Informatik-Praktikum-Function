@@ -11,7 +11,7 @@ class ExampleTest {
   Iterable<Tuple.Tuple2<Integer,Integer>> facts(){
     return Table.of(
             Tuple.of(0,1),
-            Tuple.of(1,1),
+            Tuple.of(1,1)
     );
   }
 
