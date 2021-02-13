@@ -1,0 +1,20 @@
+name: Praktikum Workflow
+on:
+  push:
+    paths:
+      - 'src/main/java/currying/Operators.java'          # student solution file
+      - 'src/test/java/currying/DeMorganTest.java'      # testing script
+
+jobs:
+
+  demorgan:
+    name: DeMorganTest
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '10'
+      - run: mvn compile
+      - run: mvn -Dtest=currying.DeMorganTest test
