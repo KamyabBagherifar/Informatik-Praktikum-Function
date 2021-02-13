@@ -1,8 +1,9 @@
 name: Praktikum Workflow
-on: push
-  paths:
-    - 'src/main/java/currying/Operators.java'          # student solution file
-    - 'src/test/java/currying/DeMorganTest.java'      # testing script
+on:
+  push:
+    paths:
+      - 'src/main/java/currying/Operators.java'          # student solution file
+      - 'src/test/java/currying/DeMorganTest.java'      # testing script
 
 jobs:
 
