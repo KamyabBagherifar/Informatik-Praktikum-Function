@@ -1,6 +1,9 @@
 name: alltestinonejob
 on:
   push:
+    paths:
+      - 'src/main/java/currying/**'          # student solution file
+      - 'src/test/java/currying/**'      # testing script
 
 jobs:
   demorgan:
