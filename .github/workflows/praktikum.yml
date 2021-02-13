@@ -1,6 +1,6 @@
 name: manyjobs
 on:
-  push:
+  workflow_dispatch:
 
 jobs:
 
