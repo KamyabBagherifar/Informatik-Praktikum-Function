@@ -1,0 +1,27 @@
+name: alltestinonejob
+on:
+  push:
+
+jobs:
+  demorgan:
+    name: DeMorganTest
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '10'
+      - name: compile
+        run: mvn compile
+      - name: DeMorganTest
+        run: mvn -Dtest=currying.DeMorganTest test
+      - name: FactTest
+        run: mvn -Dtest=currying.FactTest test
+      - name: BinomTest
+        run: mvn -Dtest=currying.BinomTest test
+      - name: GgtTest
+        run: mvn -Dtest=currying.GgtTest test
+      - name: FibTest
+        run: mvn -Dtest=currying.FibTest test
+
