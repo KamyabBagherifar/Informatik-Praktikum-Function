@@ -1,4 +1,4 @@
-name: Praktikum Workflow
+name: manyjobs
 on:
   push:
 

@@ -1,4 +1,4 @@
-name: alltestinonejob
+name: just1job
 on:
   push:
     paths:
@@ -6,8 +6,8 @@ on:
       - 'src/test/java/currying/**'      # testing script
 
 jobs:
-  demorgan:
-    name: DeMorganTest
+  alltests:
+    name: Alle Tests
     runs-on: ubuntu-latest
     timeout-minutes: 1
     steps:
