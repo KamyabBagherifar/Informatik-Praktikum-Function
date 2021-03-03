@@ -6,6 +6,6 @@ public class FactTest {
 
   @Example
   boolean test(){
-    return true;
+    return false;
   }
 }
