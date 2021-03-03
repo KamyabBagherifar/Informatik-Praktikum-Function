@@ -1,0 +1,55 @@
+image: maven:latest
+#inspired by https://gitlab.com/gitlab-examples/maven/simple-maven-example
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+  MAVEN_CLI_OPTS: "--batch-mode"
+
+cache:
+  paths:
+    - .m2/repository/
+    - target/
+
+Build:
+  stage: build
+  script:
+    - mvn $MAVEN_CLI_OPTS compile
+
+Examples:
+  stage: test
+  script:
+    - mvn -Dtest=currying.ExamplesTest test
+
+DeMorgan:
+  stage: test
+  script:
+    - mvn -Dtest=currying.DeMorganTest test
+
+Fact:
+  stage: test
+  script:
+    - mvn -Dtest=currying.FactTest test
+
+Binom:
+  stage: test
+  script:
+    - mvn -Dtest=currying.BinomTest test
+
+ggT:
+  stage: test
+  script:
+    - mvn -Dtest=currying.GgTest test
+
+Fib:
+  stage: test
+  script:
+    - mvn -Dtest=currying.FibTest test
+
+Composition:
+  stage: test
+  script:
+    - mvn -Dtest=currying.CompositionTest test
+
+deploy-prod:
+  stage: deploy
+  script:
+    - echo "This job deploys something from the $CI_COMMIT_BRANCH branch."
