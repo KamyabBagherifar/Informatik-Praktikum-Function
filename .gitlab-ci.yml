@@ -37,7 +37,7 @@ Binom:
 ggT:
   stage: test
   script:
-    - mvn -Dtest=currying.GgTest test
+    - mvn -Dtest=currying.GgtTest test
 
 Fib:
   stage: test
