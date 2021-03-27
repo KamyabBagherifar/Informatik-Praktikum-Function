@@ -1,32 +1,34 @@
 package currying;
 
 
+import java.lang.reflect.Field;
+
 public class Operators {
 
-    static int max(int a ,int b){
-        return Math.max(a, b);
-    }
+    static Function<Boolean, Boolean> not = a -> !a;
 
-    static boolean not(boolean a){
-        return !a;
-    }
 
-    static boolean und(boolean a , boolean b){
-        return a || b;
-    }
+    static Function<Integer, Function<Integer,Integer>> max = a -> b -> a > b ? a : b;
 
-    static boolean oder(boolean a , boolean b){
-        return a && b;
-    }
 
-    static boolean nor(boolean a , boolean b){
-        return not(oder(a,b));
+    static Function<Boolean, Function<Boolean,Boolean>> and = a -> b -> a && b;
 
-    }
+    static Function<Boolean, Function<Boolean,Boolean>> or = a -> b -> a || b;
 
-    static boolean nand(boolean a, boolean b){
-        return not(und(a,b));
-    }
+    static Function<Boolean, Function<Boolean, Boolean>> nor = a -> b -> not.apply(or.apply(a).apply(b));
+
+    static Function<Boolean, Function<Boolean, Boolean>> nand = a -> b -> not.apply(and.apply(a).apply(b));
+
+    static Function<Integer, Boolean> odd = a -> a % 2 != 0;
+
+
+
+
+
+
+
+
+
 
 
 

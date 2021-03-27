@@ -25,13 +25,18 @@ public interface Function<T, U> {
         return n <= 1 ? n : n * Function.factorial.apply(n - 1);
     };
 
-    static Function<Boolean, Boolean> not(){
-        return arg -> !arg;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
-
-
-
-
-
-
-}
