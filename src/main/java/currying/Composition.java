@@ -9,4 +9,6 @@ public class Composition {
     static Function<Integer, Boolean> evenFib = n -> even.apply(fib.apply(n));
 
 
+
+
 }

@@ -53,12 +53,14 @@ public class FibTest {
 
 
     }
-   /* @Property(tries = 1000)
+    @Property(tries = 1000)
     boolean test4(@ForAll @IntRange(min = 1, max = 20) int n) {
 
-        return loop(n,0,0) == fib.apply(n+2) -1;
+        return loop.apply(n).apply(0).apply(0) == fib.apply(n+2) -1;
 
     }
-*/
+
+
+
 
 }
